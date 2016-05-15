@@ -13,6 +13,7 @@
         $new_str .= $str[$i];
       }
     }
+    print_r($new_str);
   }
   valstr();
 

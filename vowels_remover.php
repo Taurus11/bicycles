@@ -2,18 +2,17 @@
 
   function valstr () {
 
-    $vowels = 'aeiouy';
+    $vowels[] = 'aeiouy';
     $str = "hello world";
     $new_str = '';
     $len_str = strlen($str);
-    $len_vowels = strlen($vowels);
 
-    for( $i = 0; $i <= $len_str; $i++ ) {
-      if (!strstr($vowels, $str[$i])) {
+    for( $i = 0; $i < $len_str; $i++ ) {
+      if (!in_array($str[$i], $vowels)) {
         $new_str .= $str[$i];
       }
     }
-    print_r($new_str);
+    echo ($new_str);
   }
   valstr();
 
